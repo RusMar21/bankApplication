@@ -1,7 +1,7 @@
-package com.bankApplication.bank;
+package com.bankApplication.bank.entities;
 
+import com.bankApplication.bank.entities.Card;
 import lombok.*;
-import org.hibernate.annotations.TypeDefs;
 
 import javax.persistence.*;
 import java.util.Date;

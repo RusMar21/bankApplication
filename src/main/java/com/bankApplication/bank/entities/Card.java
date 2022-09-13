@@ -1,4 +1,4 @@
-package com.bankApplication.bank;
+package com.bankApplication.bank.entities;
 
 import lombok.*;
 

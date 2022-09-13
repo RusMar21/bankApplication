@@ -1,5 +1,6 @@
-package com.bankApplication.bank;
+package com.bankApplication.bank.entities;
 
+import com.bankApplication.bank.entities.Card;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,11 +14,15 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private final Long id;
+
     private final String username;
+
     private final String password;
+
     private final String fullname;
+
     @OneToOne(optional = false)
     @JoinColumn(name="card_id", unique = true)
     private Card card;
