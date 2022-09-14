@@ -2,10 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Registration Page</title>
+    <title>Bank Application</title>
 </head>
 <body>
-
+<h1>Регистрация</h1>
+<form method="POST" th:action="@{/registration}" id="registerForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username"/><br/>
+    <label for="password">Password: </label>
+    <input type="password" name="password"/><br/>
+    <label for="confirm">Confirm password: </label>
+    <input type="password" name="confirm"/><br/>
+    <label for="fullname">Full name: </label>
+    <input type="text" name="fullname"/><br/>
+    <label for="card_Number">Card Number: </label>
+    <input type="text" name="card_Number"/><br/>
+    <label for="card_Expiration">Card Expiration: </label>
+    <input type="text" name="card_Expiration"/><br/>
+    <label for="card_CVV">card CVV: </label>
+    <input type="text" name="card_CVV"/><br/>
+    <input type="submit" value="Register"/>
+</form>
 </body>
 </html>

@@ -19,9 +19,9 @@ public class Transaction {
     private final Type type;
     private final Integer sum;
     private Date timeOfTransaction = new Date();
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "card_id")
-    private Card card;
+    //@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    //@JoinColumn(name = "card_id")
+    //private Card card;
 
     private enum Type {
         SENDING, RECEIVING
