@@ -7,21 +7,19 @@
 <body>
 <h1>Регистрация</h1>
 <form method="POST" th:action="@{/registration}" id="registerForm">
-    <label for="username">Username: </label>
+    <label for="username">Логин: </label>
     <input type="text" name="username"/><br/>
-    <label for="password">Password: </label>
+    <label for="password">Пароль: </label>
     <input type="password" name="password"/><br/>
-    <label for="confirm">Confirm password: </label>
-    <input type="password" name="confirm"/><br/>
-    <label for="fullname">Full name: </label>
+    <label for="fullname">ФИО: </label>
     <input type="text" name="fullname"/><br/>
-    <label for="card_Number">Card Number: </label>
+    <label for="card_Number">Номер карты: </label>
     <input type="text" name="card_Number"/><br/>
-    <label for="card_Expiration">Card Expiration: </label>
+    <label for="card_Expiration">Срок действия: </label>
     <input type="text" name="card_Expiration"/><br/>
-    <label for="card_CVV">card CVV: </label>
+    <label for="card_CVV">CVV: </label>
     <input type="text" name="card_CVV"/><br/>
-    <input type="submit" value="Register"/>
+    <input type="submit" value="Регистрация"/>
 </form>
 </body>
 </html>

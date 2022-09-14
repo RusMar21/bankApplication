@@ -8,16 +8,16 @@
 <body>
 <h1>Login</h1>
 <div th:if="${error}">
-    Unable to login. Check your username and password.
+    Неккоректно введены данные
 </div>
-<p>New here? Click
-    <a th:href="@{/registration}">here</a> to register.</p>
+<p>Впервые здесь? нажимай
+    <a th:href="@{/registration}">сюда</a> для регистрации.</p>
 <form method="POST" th:action="@{/login}" id="loginForm">
-    <label for="username">Username: </label>
+    <label for="username">Логин: </label>
     <input type="text" name="username" id="username" /><br/>
-    <label for="password">Password: </label>
+    <label for="password">Пароль: </label>
     <input type="password" name="password" id="password" /><br/>
-    <input type="submit" value="Login"/>
+    <input type="submit" value="Войти"/>
 </form>
 </body>
 </html>
