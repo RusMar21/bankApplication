@@ -7,13 +7,15 @@
 </head>
 <body>
 <div>
-  <strong>Добро пожаловать!</strong>
+  <strong>Добро пожаловать, </strong>
+  <strong th:text="${username}">Пользователь </strong>
+  <strong>!</strong>
 </div>
 <div>
   <ul>
-    <li>Информация о счете</li>
+    <li><a href="/userMain/currentUserInfo">Информация о счете</a></li>
     <li>История переводов</li>
-    <li>Перевести средства</li>
+    <li><a href = "/userMain/transfer">Перевести средства</a></li>
   </ul>
 </div>
 <div>

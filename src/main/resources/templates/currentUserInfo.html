@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация</title>
+</head>
+<body>
+<table>
+<thead>
+<th>Имя пользователя</th>
+<th>ФИО</th>
+</thead>
+<tbody>
+<tr>
+    <td th:text = "${user.getUsername}"/>
+    <td th:text = "${user.getFullname}"/>
+</tr>
+</tbody>
+</table>
+
+<table>
+    <thead>
+    <th>Номер карты</th>
+    <th>Срок действия</th>
+    <th>Баланс</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text = "${card.getCard_Number}"/>
+        <td th:text = "${card.getCard_Expiration}"/>
+        <td th:text = "${card.getBalance}">
+    </tr>
+    </tbody>
+</table>
+<div>
+    <form action="/userMain">
+        <input type="submit" value="Назад">
+    </form>
+</div>
+</body>
+</html>

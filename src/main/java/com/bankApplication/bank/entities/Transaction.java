@@ -14,16 +14,13 @@ import java.util.Date;
 @RequiredArgsConstructor
 public class Transaction {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long id;
-    private final Type type;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private final Integer sum;
-    private Date timeOfTransaction = new Date();
-    //@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    //@JoinColumn(name = "card_id")
-    //private Card card;
+    private final Date time_of_Transaction = new Date();
+    private final String recipient_card_number;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "card_id")
+    private final Card card;
 
-    private enum Type {
-        SENDING, RECEIVING
-    }
 }

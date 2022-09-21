@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о пользователях</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <th>ID</th>
+        <th>Имя пользователя</th>
+        <th>Пароль</th>
+        <th>ФИО</th>
+        <th>Роль</th>
+        </thead>
+        <tbody>
+        <tr th:each = "user: ${allUsers}" >
+            <td th:text = "${user.getId}"/>
+            <td th:text = "${user.getUsername}"/>
+            <td th:text = "${user.getPassword}"/>
+            <td th:text = "${user.getFullname}"/>
+            <td th:each = "role : ${user.getRoles}"
+            th:text = "${role.getName}" />
+            <td>
+                <form th:action = "@{usersInfo}" method="post">
+                    <input type="hidden" name="userId" th:value = "${user.getId}"/>
+                    <input type="hidden" name="action" value="delete"/>
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+    <div>
+        <form action="/admin">
+            <input type="submit" value="Назад">
+        </form>
+    </div>
+</body>
+</html>

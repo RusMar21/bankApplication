@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевод средств</title>
+</head>
+<h1>Перевод средств</h1>
+<body>
+<form method="post" action = "transfer.html" th:action = "${transfer}">
+    <label for = "recipient_card_Number"> Номер карты: </label>
+    <input type="text" name="recipient_card_Number">
+    <label for = "sum"> Сумма: </label>
+    <input type="text" name="sum" >
+    <input type="submit" value="Перевести">
+</form>
+<div>
+    <form action="/userMain">
+        <input type="submit" value="Назад">
+    </form>
+</div>
+</body>
+</html>
